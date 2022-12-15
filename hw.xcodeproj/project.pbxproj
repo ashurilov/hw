@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0964B6294A83A9009EA115 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0964B5294A83A9009EA115 /* ThirdViewController.swift */; };
+		DE6550982949350000598BB3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6550972949350000598BB3 /* SecondViewController.swift */; };
 		DEA95B0D291817AB00CC20D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA95B0C291817AB00CC20D1 /* AppDelegate.swift */; };
 		DEA95B0F291817AB00CC20D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA95B0E291817AB00CC20D1 /* SceneDelegate.swift */; };
 		DEA95B11291817AB00CC20D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA95B10291817AB00CC20D1 /* ViewController.swift */; };
-		DEA95B14291817AB00CC20D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA95B12291817AB00CC20D1 /* Main.storyboard */; };
 		DEA95B16291817AC00CC20D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA95B15291817AC00CC20D1 /* Assets.xcassets */; };
 		DEA95B19291817AC00CC20D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA95B17291817AC00CC20D1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE0964B5294A83A9009EA115 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		DE6550972949350000598BB3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		DEA95B09291817AB00CC20D1 /* hw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA95B0C291817AB00CC20D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA95B0E291817AB00CC20D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DEA95B10291817AB00CC20D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DEA95B13291817AB00CC20D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEA95B15291817AC00CC20D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEA95B18291817AC00CC20D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEA95B1A291817AC00CC20D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,7 +61,8 @@
 				DEA95B0C291817AB00CC20D1 /* AppDelegate.swift */,
 				DEA95B0E291817AB00CC20D1 /* SceneDelegate.swift */,
 				DEA95B10291817AB00CC20D1 /* ViewController.swift */,
-				DEA95B12291817AB00CC20D1 /* Main.storyboard */,
+				DE6550972949350000598BB3 /* SecondViewController.swift */,
+				DE0964B5294A83A9009EA115 /* ThirdViewController.swift */,
 				DEA95B15291817AC00CC20D1 /* Assets.xcassets */,
 				DEA95B17291817AC00CC20D1 /* LaunchScreen.storyboard */,
 				DEA95B1A291817AC00CC20D1 /* Info.plist */,
@@ -127,7 +130,6 @@
 			files = (
 				DEA95B19291817AC00CC20D1 /* LaunchScreen.storyboard in Resources */,
 				DEA95B16291817AC00CC20D1 /* Assets.xcassets in Resources */,
-				DEA95B14291817AB00CC20D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6550982949350000598BB3 /* SecondViewController.swift in Sources */,
 				DEA95B11291817AB00CC20D1 /* ViewController.swift in Sources */,
 				DEA95B0D291817AB00CC20D1 /* AppDelegate.swift in Sources */,
+				DE0964B6294A83A9009EA115 /* ThirdViewController.swift in Sources */,
 				DEA95B0F291817AB00CC20D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +151,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DEA95B12291817AB00CC20D1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DEA95B13291817AB00CC20D1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DEA95B17291817AC00CC20D1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +288,6 @@
 				INFOPLIST_FILE = hw/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +315,6 @@
 				INFOPLIST_FILE = hw/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
