@@ -16,9 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let vc = ViewController()
-        let secondvc = BirthdayViewController()
-        let addNew = AddNewContact()
-        let navController = UINavigationController(rootViewController: addNew)
+        let navController = UINavigationController(rootViewController: vc)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
     }

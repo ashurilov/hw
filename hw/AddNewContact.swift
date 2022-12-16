@@ -118,12 +118,11 @@ class AddNewContact: UIViewController {
     }()
     
     let agePicker = UIPickerView()
+    
     let sexPickerView = UIPickerView()
-    let datePickerView : UIDatePicker = {
-        let picker = UIDatePicker()
-        picker.datePickerMode = .date
-        return picker
-    }()
+    
+    let datePickerView = UIDatePicker()
+    
     
     let instagramAlert: UIAlertController = UIAlertController(title: "Внимание", message: "Введите ваш instagram username:", preferredStyle: .alert)
     
@@ -139,12 +138,10 @@ class AddNewContact: UIViewController {
         createContraints()
         addPickerOnTextFields()
 
-        
         // pickerViewAGe
         agePicker.tag = 0
         agePicker.delegate = self
         agePicker.dataSource = self
-        
         
         // sexPickerView
         sexPickerView.tag = 1
@@ -152,13 +149,18 @@ class AddNewContact: UIViewController {
         sexPickerView.dataSource = self
         
         // datePicker
+        datePickerView.datePickerMode = .date
+        datePickerView.preferredDatePickerStyle = .wheels
         datePickerView.addTarget(self, action: #selector(datepickerValueChanged(picker:)), for: .valueChanged)
-            
+        
+        // устанавливаем лого
         logoDefault.image = defaultImageLogo
         
+        // добавляем таргеты на кнопки
         buttonCancel.addTarget(self, action: #selector(goback), for: .touchUpInside)
         buttonAdd.addTarget(self, action: #selector(goback), for: .touchUpInside)
         
+        // заполняем массив возрастов
         for i in 14...100 {
             ageArray.append(String(i))
         }
@@ -174,9 +176,15 @@ class AddNewContact: UIViewController {
         
         instagramTextField.addTarget(self, action: #selector(showInstagramAlert), for: .touchDown)
     }
+    
+    
     // таргет для date picker
     @objc func datepickerValueChanged(picker: UIDatePicker) {
-        print(picker.date)
+        // настраиваем формат даты
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        self.dateTextField.text = dateFormatter.string(from: datePickerView.date)
     }
     
     // таргет для инстаграм текст филда
@@ -279,7 +287,7 @@ class AddNewContact: UIViewController {
         instagramTextField.rightAnchor.constraint(equalTo: sexTextField.rightAnchor).isActive = true
     }
             
-            
+    // таргет возвращения на прошлый контроллер
     @objc func goback() {
         dismiss(animated: true)
     }
@@ -289,15 +297,14 @@ class AddNewContact: UIViewController {
         nameTextField.resignFirstResponder()
         ageTextField.resignFirstResponder()
         sexTextField.resignFirstResponder()
+        dateTextField.resignFirstResponder()
     }
 }
 
 
 
 extension AddNewContact: UIPickerViewDelegate {
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
         switch pickerView.tag {
         case 0:
             return ageArray[row]
@@ -305,12 +312,10 @@ extension AddNewContact: UIPickerViewDelegate {
             return sexarray[row]
         default: ""
         }
-        
         return ""
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
         switch pickerView.tag {
         case 0:
             ageTextField.text = ageArray[row]
@@ -320,29 +325,21 @@ extension AddNewContact: UIPickerViewDelegate {
             //sexTextField.resignFirstResponder()
         default: break
         }
-        
-    
-        
     }
-    
 }
 
 extension AddNewContact: UIPickerViewDataSource {
-    
     // кол-во компонентов
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-
         switch pickerView.tag {
         case 0 , 1 :
             return 1
         default : return 1
         }
-        
     }
     
     // сколько строк в компоненте
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
         switch pickerView.tag  {
         case 0 :
             return ageArray.count
@@ -350,9 +347,5 @@ extension AddNewContact: UIPickerViewDataSource {
             return sexarray.count
         default : return 0
         }
-        
-        
     }
-    
-    
 }

@@ -99,10 +99,11 @@ class ViewController: UIViewController {
         createUI()
         createConstraints()
         
-        // target
+        // target for button
         buttonLogin.addTarget(nil, action: #selector(pressButtonLogin(button:)), for: .touchUpInside)
     }
     
+    // button target
     @objc func pressButtonLogin(button: UIButton) {
         let secondVC = BirthdayViewController()
         navigationController?.pushViewController(secondVC, animated: true)
