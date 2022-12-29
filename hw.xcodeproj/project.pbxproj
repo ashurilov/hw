@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE9498E1295DF2E400047B0F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9498E0295DF2E400047B0F /* Player.swift */; };
+		DE9498E5295DF33600047B0F /* CustomSongButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9498E4295DF33600047B0F /* CustomSongButton.swift */; };
+		DE9498E7295DF34E00047B0F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9498E6295DF34E00047B0F /* Song.swift */; };
+		DE9498E9295DF35F00047B0F /* CustomPlayerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9498E8295DF35F00047B0F /* CustomPlayerButton.swift */; };
+		DE9498EB295DF37100047B0F /* CustomLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9498EA295DF37100047B0F /* CustomLabels.swift */; };
+		DE9498ED295DF39F00047B0F /* song1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE9498EC295DF39F00047B0F /* song1.mp3 */; };
+		DE9498EF295DF3A300047B0F /* song2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE9498EE295DF3A300047B0F /* song2.mp3 */; };
 		DEA95B0D291817AB00CC20D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA95B0C291817AB00CC20D1 /* AppDelegate.swift */; };
 		DEA95B0F291817AB00CC20D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA95B0E291817AB00CC20D1 /* SceneDelegate.swift */; };
-		DEA95B11291817AB00CC20D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA95B10291817AB00CC20D1 /* ViewController.swift */; };
-		DEA95B14291817AB00CC20D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA95B12291817AB00CC20D1 /* Main.storyboard */; };
+		DEA95B11291817AB00CC20D1 /* ListOfSongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA95B10291817AB00CC20D1 /* ListOfSongs.swift */; };
 		DEA95B16291817AC00CC20D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA95B15291817AC00CC20D1 /* Assets.xcassets */; };
 		DEA95B19291817AC00CC20D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA95B17291817AC00CC20D1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE9498E0295DF2E400047B0F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		DE9498E4295DF33600047B0F /* CustomSongButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSongButton.swift; sourceTree = "<group>"; };
+		DE9498E6295DF34E00047B0F /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		DE9498E8295DF35F00047B0F /* CustomPlayerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlayerButton.swift; sourceTree = "<group>"; };
+		DE9498EA295DF37100047B0F /* CustomLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabels.swift; sourceTree = "<group>"; };
+		DE9498EC295DF39F00047B0F /* song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song1.mp3; sourceTree = "<group>"; };
+		DE9498EE295DF3A300047B0F /* song2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song2.mp3; sourceTree = "<group>"; };
 		DEA95B09291817AB00CC20D1 /* hw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA95B0C291817AB00CC20D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA95B0E291817AB00CC20D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DEA95B10291817AB00CC20D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DEA95B13291817AB00CC20D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DEA95B10291817AB00CC20D1 /* ListOfSongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfSongs.swift; sourceTree = "<group>"; };
 		DEA95B15291817AC00CC20D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEA95B18291817AC00CC20D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEA95B1A291817AC00CC20D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +49,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE9498E2295DF2F200047B0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DEA95B10291817AB00CC20D1 /* ListOfSongs.swift */,
+				DE9498E0295DF2E400047B0F /* Player.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE9498E3295DF30D00047B0F /* Extencions */ = {
+			isa = PBXGroup;
+			children = (
+				DE9498E4295DF33600047B0F /* CustomSongButton.swift */,
+				DE9498E6295DF34E00047B0F /* Song.swift */,
+				DE9498E8295DF35F00047B0F /* CustomPlayerButton.swift */,
+				DE9498EA295DF37100047B0F /* CustomLabels.swift */,
+			);
+			path = Extencions;
+			sourceTree = "<group>";
+		};
 		DEA95B00291817AB00CC20D1 = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +90,13 @@
 			children = (
 				DEA95B0C291817AB00CC20D1 /* AppDelegate.swift */,
 				DEA95B0E291817AB00CC20D1 /* SceneDelegate.swift */,
-				DEA95B10291817AB00CC20D1 /* ViewController.swift */,
-				DEA95B12291817AB00CC20D1 /* Main.storyboard */,
+				DE9498E2295DF2F200047B0F /* Views */,
+				DE9498E3295DF30D00047B0F /* Extencions */,
 				DEA95B15291817AC00CC20D1 /* Assets.xcassets */,
 				DEA95B17291817AC00CC20D1 /* LaunchScreen.storyboard */,
 				DEA95B1A291817AC00CC20D1 /* Info.plist */,
+				DE9498EC295DF39F00047B0F /* song1.mp3 */,
+				DE9498EE295DF3A300047B0F /* song2.mp3 */,
 			);
 			path = hw;
 			sourceTree = "<group>";
@@ -125,9 +159,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9498EF295DF3A300047B0F /* song2.mp3 in Resources */,
 				DEA95B19291817AC00CC20D1 /* LaunchScreen.storyboard in Resources */,
+				DE9498ED295DF39F00047B0F /* song1.mp3 in Resources */,
 				DEA95B16291817AC00CC20D1 /* Assets.xcassets in Resources */,
-				DEA95B14291817AB00CC20D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEA95B11291817AB00CC20D1 /* ViewController.swift in Sources */,
+				DE9498E7295DF34E00047B0F /* Song.swift in Sources */,
+				DE9498E5295DF33600047B0F /* CustomSongButton.swift in Sources */,
+				DE9498E1295DF2E400047B0F /* Player.swift in Sources */,
+				DE9498EB295DF37100047B0F /* CustomLabels.swift in Sources */,
+				DEA95B11291817AB00CC20D1 /* ListOfSongs.swift in Sources */,
 				DEA95B0D291817AB00CC20D1 /* AppDelegate.swift in Sources */,
+				DE9498E9295DF35F00047B0F /* CustomPlayerButton.swift in Sources */,
 				DEA95B0F291817AB00CC20D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +187,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DEA95B12291817AB00CC20D1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DEA95B13291817AB00CC20D1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DEA95B17291817AC00CC20D1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +324,6 @@
 				INFOPLIST_FILE = hw/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +351,6 @@
 				INFOPLIST_FILE = hw/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
