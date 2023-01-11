@@ -16,7 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let autorizationViewController = AutorizationViewController()
-        let menuViewController = MenuViewController()
         let navigationContoller = UINavigationController(rootViewController: autorizationViewController)
         window.rootViewController = navigationContoller
         self.window = window

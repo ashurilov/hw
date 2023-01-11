@@ -11,7 +11,7 @@ final class AutorizationViewController: UIViewController {
     var loginModel: AutorizationModel = AutorizationModel()
     
     // UI
-    let autorizationLabel: UILabel = {
+    private let autorizationLabel: UILabel = {
         let label = UILabel()
         label.text = "Авторизация"
         label.font = UIFont.boldSystemFont(ofSize: 21)
@@ -20,7 +20,7 @@ final class AutorizationViewController: UIViewController {
         return label
     }()
     
-    let loginLabel: UILabel = {
+    private let loginLabel: UILabel = {
         let label = UILabel()
         label.text = "Логин:"
         label.font = UIFont.boldSystemFont(ofSize: 15)
@@ -28,7 +28,7 @@ final class AutorizationViewController: UIViewController {
         return label
     }()
     
-    let passwordLabel: UILabel = {
+    private let passwordLabel: UILabel = {
         let label = UILabel()
         label.text = "Пароль:"
         label.font = UIFont.boldSystemFont(ofSize: 15)
@@ -36,7 +36,7 @@ final class AutorizationViewController: UIViewController {
         return label
     }()
     
-    let themeLabel: UILabel = {
+    private let themeLabel: UILabel = {
         let label = UILabel()
         label.text = "Выберите тему:"
         label.font = UIFont.systemFont(ofSize: 15)
@@ -44,14 +44,14 @@ final class AutorizationViewController: UIViewController {
         return label
     }()
     
-    let resultLabel: UILabel = {
+    private let resultLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
     }()
     
     
-    let loginTextField: UITextField = {
+    private let loginTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Введите логин"
         textField.clearButtonMode = .whileEditing
@@ -60,7 +60,7 @@ final class AutorizationViewController: UIViewController {
         return textField
     }()
     
-    let passwordTextField: UITextField = {
+    private let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Введите пароль"
         textField.clearButtonMode = .whileEditing
@@ -70,7 +70,7 @@ final class AutorizationViewController: UIViewController {
         return textField
     }()
     
-    let autorizationButton: UIButton = {
+    private let autorizationButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Авторизация", for: .normal)
         button.setTitleColor(.black, for: .normal)
@@ -83,7 +83,7 @@ final class AutorizationViewController: UIViewController {
         return button
     }()
     
-    let themeSegmentedControl: UISegmentedControl = {
+    private let themeSegmentedControl: UISegmentedControl = {
         let items = ["Белая", "Жёлтая", "Оранжевая"]
         let segment = UISegmentedControl(items: items)
         return segment
@@ -127,7 +127,7 @@ final class AutorizationViewController: UIViewController {
         }
     }
     
-    func createUI() {
+    private func createUI() {
         [autorizationLabel, loginLabel, loginTextField, passwordLabel, passwordTextField, resultLabel, autorizationButton,themeLabel, themeSegmentedControl].forEach{
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)

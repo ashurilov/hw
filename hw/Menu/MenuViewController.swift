@@ -15,36 +15,36 @@ protocol CountDelegate: AnyObject {
 final class MenuViewController: UIViewController {
     
     weak var delegate: CountDelegate?
-    let orderVC = OrderViewController()
+    private let orderVC = OrderViewController()
     
-    var count: UInt = 0
+    private var count: UInt = 0
     
-    var poDomashCount: UInt = 0
-    var chetireSiraCount: UInt = 0
-    var cesarCount: UInt = 0
+    private var poDomashCount: UInt = 0
+    private var chetireSiraCount: UInt = 0
+    private var cesarCount: UInt = 0
     
-    let poDomashPizzaImage = CustomImage(type: .poDomashnemy)
-    let poDomashPizzaNameLabel = CustomPizzaName(type: .poDomashnemy)
-    let poDomashDescriptionLabel = CustomPizzaDescription(type: .poDomashnemy)
-    let poDomashPizzaPrice = CustomPizzaPrice(type: .poDomashnemy)
-    let poDomashPizzaCountSegment = CustomCountPizzaSegment(type: .poDomashnemy)
-    var poDomashPizzaCount = CustomPizzaCount(type: .poDomashnemy)
+    private let poDomashPizzaImage = CustomImage(type: .poDomashnemy)
+    private let poDomashPizzaNameLabel = CustomPizzaName(type: .poDomashnemy)
+    private let poDomashDescriptionLabel = CustomPizzaDescription(type: .poDomashnemy)
+    private let poDomashPizzaPrice = CustomPizzaPrice(type: .poDomashnemy)
+    private let poDomashPizzaCountSegment = CustomCountPizzaSegment(type: .poDomashnemy)
+    private var poDomashPizzaCount = CustomPizzaCount(type: .poDomashnemy)
     
-    let chetireSiraPizzaImage = CustomImage(type: .chetireSira)
-    let chetireSiraPizzaNameLabel = CustomPizzaName(type: .chetireSira)
-    let chetireSiraDescriptionLabel = CustomPizzaDescription(type: .chetireSira)
-    let chetireSiraPizzaPrice = CustomPizzaPrice(type: .chetireSira)
-    let chetireSiraPizzaCountSegment = CustomCountPizzaSegment(type: .chetireSira)
-    let chetireSiraPizzaCount = CustomPizzaCount(type: .chetireSira)
+    private let chetireSiraPizzaImage = CustomImage(type: .chetireSira)
+    private let chetireSiraPizzaNameLabel = CustomPizzaName(type: .chetireSira)
+    private let chetireSiraDescriptionLabel = CustomPizzaDescription(type: .chetireSira)
+    private let chetireSiraPizzaPrice = CustomPizzaPrice(type: .chetireSira)
+    private let chetireSiraPizzaCountSegment = CustomCountPizzaSegment(type: .chetireSira)
+    private let chetireSiraPizzaCount = CustomPizzaCount(type: .chetireSira)
     
-    let cesarPizzaImage = CustomImage(type: .cesar)
-    let cesarPizzaNameLabel = CustomPizzaName(type: .cesar)
-    let cesarDescriptionLabel = CustomPizzaDescription(type: .cesar)
-    let cesaraPizzaPrice = CustomPizzaPrice(type: .cesar)
-    let cesarPizzaCountSegment = CustomCountPizzaSegment(type: .cesar)
-    let cesarPizzaCount = CustomPizzaCount(type: .cesar)
+    private let cesarPizzaImage = CustomImage(type: .cesar)
+    private let cesarPizzaNameLabel = CustomPizzaName(type: .cesar)
+    private let cesarDescriptionLabel = CustomPizzaDescription(type: .cesar)
+    private let cesaraPizzaPrice = CustomPizzaPrice(type: .cesar)
+    private let cesarPizzaCountSegment = CustomCountPizzaSegment(type: .cesar)
+    private let cesarPizzaCount = CustomPizzaCount(type: .cesar)
     
-    let sumLabel: UILabel = {
+    private let sumLabel: UILabel = {
         let label = UILabel()
         label.text = "Ваша сумма заказа:"
         label.font = UIFont.boldSystemFont(ofSize: 17)
@@ -52,7 +52,7 @@ final class MenuViewController: UIViewController {
         return label
     }()
     
-    lazy var sumNumLabel: UILabel = {
+    lazy private var sumNumLabel: UILabel = {
         let label = UILabel()
         label.text = "\(count)₽"
         label.font = UIFont.boldSystemFont(ofSize: 19)
@@ -60,7 +60,7 @@ final class MenuViewController: UIViewController {
         return label
     }()
     
-    lazy var nextButton: UIButton = {
+    lazy private var nextButton: UIButton = {
         var button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Продолжить", for: .normal)
@@ -147,7 +147,7 @@ final class MenuViewController: UIViewController {
         }
     }
     
-    func createUI() {
+    private func createUI() {
         configurePizza()
         [poDomashPizzaImage, poDomashPizzaNameLabel, poDomashDescriptionLabel, poDomashPizzaPrice, poDomashPizzaCountSegment, poDomashPizzaCount,
          chetireSiraPizzaImage, chetireSiraPizzaNameLabel, chetireSiraDescriptionLabel, chetireSiraPizzaPrice , chetireSiraPizzaCountSegment, chetireSiraPizzaCount,
@@ -232,7 +232,7 @@ final class MenuViewController: UIViewController {
         ])
     }
     
-    func configurePizza() {
+    private func configurePizza() {
         poDomashPizzaImage.configure()
         poDomashPizzaNameLabel.configure()
         poDomashDescriptionLabel.configure()

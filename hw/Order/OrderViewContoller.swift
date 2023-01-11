@@ -10,11 +10,11 @@ import UIKit
 
 
 
-final class OrderViewController: UIViewController {
+final  class OrderViewController: UIViewController {
     
     static var countOrder: UInt = 0
     
-    lazy var sumOfOrderLabel: UILabel = {
+    private lazy var sumOfOrderLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.font = .boldSystemFont(ofSize: 19)
@@ -23,7 +23,7 @@ final class OrderViewController: UIViewController {
         return label
     }()
     
-    let tipsLabel: UILabel = {
+    private let tipsLabel: UILabel = {
         let label = UILabel()
         label.text = "Хотите оставить чаевые?"
         label.font = .boldSystemFont(ofSize: 18)
@@ -31,7 +31,7 @@ final class OrderViewController: UIViewController {
         return label
     }()
     
-    lazy var tipsSegmented: UISegmentedControl = {
+    private lazy var tipsSegmented: UISegmentedControl = {
         let items = ["0%", "10%", "20%", "30%"]
         var segmented = UISegmentedControl(items: items)
         segmented.translatesAutoresizingMaskIntoConstraints = false
@@ -39,7 +39,7 @@ final class OrderViewController: UIViewController {
         return segmented
     }()
     
-    let addressLabel: UILabel = {
+    private let addressLabel: UILabel = {
         let label = UILabel()
         label.text = "Введите ваш адрес:"
         label.font = .boldSystemFont(ofSize: 18)
@@ -47,7 +47,7 @@ final class OrderViewController: UIViewController {
         return label
     }()
     
-    let addressTextField: UITextField = {
+    private let addressTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Введите адресс"
         textField.text = "г. Москва, "
@@ -57,7 +57,7 @@ final class OrderViewController: UIViewController {
     }()
     
     
-    let rateAppLabel: UILabel = {
+    private let rateAppLabel: UILabel = {
         let label = UILabel()
         label.text = "Оцените наше приложение:"
         label.font = .boldSystemFont(ofSize: 18)
@@ -65,14 +65,14 @@ final class OrderViewController: UIViewController {
         return label
     }()
     
-    lazy var rateAppSegmented: UISegmentedControl = {
+    private lazy var rateAppSegmented: UISegmentedControl = {
         let items = ["1⭐", "2⭐", "3⭐", "4⭐", "5⭐"]
         let segmented = UISegmentedControl(items: items)
         segmented.translatesAutoresizingMaskIntoConstraints = false
         return segmented
     }()
     
-    lazy var finishBUtton: UIButton = {
+    lazy private  var finishBUtton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Готово", for: .normal)
         button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
@@ -130,12 +130,12 @@ final class OrderViewController: UIViewController {
         }
     }
     
-    func createUI() {
+    private func createUI() {
         [sumOfOrderLabel, tipsLabel, tipsSegmented, addressLabel, addressTextField, rateAppLabel, rateAppSegmented, finishBUtton].forEach({ view.addSubview($0) })
         createConstraints()
     }
     
-    func createConstraints() {
+    private func createConstraints() {
         NSLayoutConstraint.activate([
             sumOfOrderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
             sumOfOrderLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
