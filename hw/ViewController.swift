@@ -7,22 +7,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final private class ViewController: UIViewController {
     
-    let chooseHeroLabel: UILabel = {
+    private let chooseHeroLabel: UILabel = {
         let label = UILabel()
         label.text = "Выбери своего героя:"
         label.font = UIFont.boldSystemFont(ofSize: 22)
         return label
     }()
     
-    let heroImageView: UIImageView = {
+    private let heroImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
-    let selectedHeroLabel: UILabel = {
+    private let selectedHeroLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.black
         label.shadowColor = .purple
@@ -31,14 +31,14 @@ class ViewController: UIViewController {
         return label
     }()
     
-    lazy var selectHeroSegmented: UISegmentedControl = {
+    private lazy var selectHeroSegmented: UISegmentedControl = {
         let items = ["1", "2", "3"]
         let segmented = UISegmentedControl(items: items)
         segmented.addTarget(self, action: #selector(selectHeroTarget(target:)), for: .valueChanged)
         return segmented
     }()
     
-    lazy var doneButton: UIButton = {
+    private lazy var doneButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Скачать картинку героя", for: .normal)
         button.setTitleColor(.black, for: .normal)
@@ -78,14 +78,14 @@ class ViewController: UIViewController {
         }
     }
 
-    func createUI() {
+    private func createUI() {
         [chooseHeroLabel, heroImageView, selectedHeroLabel, selectHeroSegmented, doneButton].forEach({ view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         })
         createConstraints()
     }
 
-    func createConstraints() {
+    private func createConstraints() {
         NSLayoutConstraint.activate([
             selectedHeroLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             selectedHeroLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
